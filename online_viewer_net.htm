@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FredSupply Reseller Course</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1e1e1e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #2b2b2b;
+      padding: 30px;
+      border: 2px solid red;
+      border-radius: 10px;
+    }
+    h1, h2 {
+      color: white;
+    }
+    .lesson, .tool-section {
+      background: #3a3a3a;
+      border-radius: 8px;
+      margin: 15px 0;
+      padding: 15px;
+      cursor: pointer;
+      text-align: left;
+    }
+    .lesson-content {
+      display: none;
+      margin-top: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: red;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input, textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 16px;
+      border: none;
+    }
+    #login-box, #course-box {
+      display: none;
+    }
+    #login-box.active, #course-box.active {
+      display: block;
+    }
+    .calendar, .calculator, .bundle-generator, .toolbox, .roi-tracker, .wins-page {
+      background-color: #444;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .wins-page img {
+      max-width: 100%;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container" id="login-box" class="active">
+  <h1>FredSupplys Reseller Course</h1>
+  <p>Enter your password to access the course:</p>
+  <input type="password" id="password" placeholder="Enter Password" />
+  <button onclick="checkPassword()">Submit</button>
+  <p id="error" style="color: red; display: none;">Incorrect password</p>
+</div>
+
+<div class="container" id="course-box">
+  <h1>Welcome Reseller!</h1>
+
+  <!-- Lessons -->
+  <div class="lesson" onclick="toggleLesson('lesson1')">
+    <h2>Lesson 1: Introduction</h2>
+    <div class="lesson-content" id="lesson1">
+      <p>Well done for taking the step to start reselling properly beside someone who has been doing it for over 5 years.</p>
+      <ul>
+        <li>All my suppliers</li>
+        <li>1:1 help and guidance</li>
+        <li>New and unseen reselling methods</li>
+        <li>Constant updates</li>
+        <li>Sneaky deals</li>
+        <li>Loads of money 💸</li>
+      </ul>
+      <p><strong>What I want from you:</strong></p>
+      <ul>
+        <li>Engagement</li>
+        <li>Weekly updates</li>
+        <li>Questions/methods</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="lesson" onclick="toggleLesson('lesson2')">
+    <h2>Lesson 2: Vendors</h2>
+    <div class="lesson-content" id="lesson2">
+      <p><strong>UK Supplier List</strong></p>
+      <p>07716436837<br>07886111639 Alex<br>07446800064 Ash<br>07983080021 Frank<br>0757752268 Maj<br>07383313441 James<br>07803391211 Same<br>07496767177 Sammy<br>07476908899 Zac</p>
+      <p>Message to send: "Hi I got your number from Fred, he goes to Pitsea said I can get clothes off you."</p>
+      <p><strong>Best Chinese Supplier</strong>: +86 136 1599 2543</p>
+      <p><strong>Pgarmz Telegram:</strong> <a href="https://t.me/+sqXrvwvrNgBIMGI0" target="_blank">Join Here</a></p>
+    </div>
+  </div>
+
+  <div class="lesson" onclick="toggleLesson('lesson3')">
+    <h2>Lesson 3: Quick Cash Method</h2>
+    <div class="lesson-content" id="lesson3">
+      <p><strong>Sell reps on Vinted: perfumes & colognes = 3-4x profit</strong></p>
+      <ol>
+        <li>Use a 1+ year Vinted account. You can use other people’s accounts—pay per sale. I use 8.</li>
+        <li>£35 starter pack (2 perfumes sell for £35–£45)</li>
+        <li>Reinvest until you're happy and see major profits.</li>
+      </ol>
+      <p><strong>Perfume Pricing:</strong><br>
+        1–5 = £12<br>
+        10 = £11<br>
+        20 = £10.50<br>
+        50 = £9.50
+      </p>
+      <p><strong>Example:</strong> Buy 50 at £9.50 = £475 → Sell for £1,750!</p>
+    </div>
+  </div>
+
+  <div class="lesson" onclick="toggleLesson('lesson4')">
+    <h2>Lesson 4: Growing Your Brand</h2>
+    <div class="lesson-content" id="lesson4">
+      <ul>
+        <li>Setup Telegram, TikTok, Facebook</li>
+        <li>Create a logo (I can help)</li>
+        <li>Post your items from Pgarmz or mine</li>
+        <li>Use WhatsApp Business</li>
+      </ul>
+      <p><strong>Top growth method:</strong> TikTok Lives + fake followers to unlock lives = 100+ Telegram subs per live.</p>
+    </div>
+  </div>
+
+  <div class="lesson" onclick="toggleLesson('lesson5')">
+    <h2>Lesson 5: Receipt Generator</h2>
+    <div class="lesson-content" id="lesson5">
+      <p><strong>Cost:</strong> £25 = unlimited receipt gen + FREE eBay views</p>
+      <ul>
+        <li>10 receipts = £15</li>
+        <li>20 = £35</li>
+        <li>30 = £40</li>
+      </ul>
+      <p>Make buyers believe it's real using realistic receipts!</p>
+    </div>
+  </div>
+
+  <div class="lesson" onclick="toggleLesson('lesson6')">
+    <h2>Lesson 6: Questions</h2>
+    <div class="lesson-content" id="lesson6">
+      <form action="mailto:Eause.contact@gmail.com" method="POST" enctype="text/plain">
+        <textarea name="question" placeholder="Enter your question..." rows="4" required></textarea>
+        <input type="email" name="email" placeholder="Your email" required>
+        <button type="submit">Send Question</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Tools -->
+
+  <div class="lesson" onclick="toggleLesson('affiliate')">
+    <h2>Affiliate Program</h2>
+    <div class="lesson-content" id="affiliate">
+      <p>Earn 10% from everyone you refer who joins Premium!</p>
+      <p>Email us for a custom code: <strong>Eause.contact@gmail.com</strong></p>
+    </div>
+  </div>
+
+  <div class="lesson" onclick="toggleLesson('stock')">
+    <h2>Stock Request Form</h2>
+    <div class="lesson-content" id="stock">
+      <form action="mailto:Eause.contact@gmail.com" method="POST" enctype="text/plain">
+        <textarea name="stock" placeholder="What stock do you need?" rows="4" required></textarea>
+        <input type="email" name="email" placeholder="Your email" required>
+        <button type="submit">Send Request</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="calendar">
+    <h2>Restock Calendar</h2>
+    <p>Restocks every <strong>Wednesday</strong> and <strong>Sunday</strong>.</p>
+  </div>
+
+  <div class="calculator">
+    <h2>Profit Calculator</h2>
+    <input type="number" id="cost" placeholder="Cost per unit (£)">
+    <input type="number" id="sell" placeholder="Selling price (£)">
+    <input type="number" id="qty" placeholder="Quantity">
+    <button onclick="calculateProfit()">Calculate</button>
+    <p id="profit-result"></p>
+  </div>
+
+  <div class="bundle-generator">
+    <h2>Bundle Generator</h2>
+    <input type="text" id="bundleItems" placeholder="Enter items separated by commas">
+    <input type="number" id="bundlePrice" placeholder="Enter total bundle price (£)">
+    <button onclick="generateBundle()">Generate Bundle</button>
+    <p id="bundle-output"></p>
+  </div>
+
+  <div class="roi-tracker">
+    <h2>ROI Tracker</h2>
+    <input type="number" id="roi-cost" placeholder="Total cost (£)">
+    <input type="number" id="roi-profit" placeholder="Total sales (£)">
+    <button onclick="calculateROI()">Track ROI</button>
+    <p id="roi-result"></p>
+  </div>
+
+  <div class="toolbox">
+    <h2>Toolbox</h2>
+    <ul>
+      <li>Receipt Generator</li>
+      <li>Profit Calculator</li>
+      <li>Bundle Generator</li>
+      <li>ROI Tracker</li>
+    </ul>
+  </div>
+
+  <div class="wins-page">
+    <h2>Wins Page 📸</h2>
+    <p>Upload and celebrate your wins! Screenshot your success stories here:</p>
+    <input type="file" id="winImage" accept="image/*" onchange="previewWin()"/>
+    <div id="winPreview"></div>
+  </div>
+
+</div>
+
+<script>
+  function checkPassword() {
+    const password = document.getElementById("password").value;
+    if (password === "Fredsupply1") {
+      document.getElementById("login-box").classList.remove("active");
+      document.getElementById("course-box").classList.add("active");
+    } else {
+      document.getElementById("error").style.display = "block";
+    }
+  }
+
+  function toggleLesson(id) {
+    const el = document.getElementById(id);
+    el.style.display = el.style.display === "block" ? "none" : "block";
+  }
+
+  function calculateProfit() {
+    const cost = parseFloat(document.getElementById("cost").value);
+    const sell = parseFloat(document.getElementById("sell").value);
+    const qty = parseInt(document.getElementById("qty").value);
+    const profit = ((sell - cost) * qty).toFixed(2);
+    document.getElementById("profit-result").innerText = `Profit: £${profit}`;
+  }
+
+  function generateBundle() {
+    const items = document.getElementById("bundleItems").value;
+    const price = document.getElementById("bundlePrice").value;
+    const output = `🔥 BUNDLE DEAL 🔥\nItems: ${items}\nTotal Price: £${price}\nDM to claim now!`;
+    document.getElementById("bundle-output").innerText = output;
+  }
+
+  function calculateROI() {
+    const cost = parseFloat(document.getElementById("roi-cost").value);
+    const profit = parseFloat(document.getElementById("roi-profit").value);
+    const roi = (((profit - cost) / cost) * 100).toFixed(2);
+    document.getElementById("roi-result").innerText = `ROI: ${roi}%`;
+  }
+
+  function previewWin() {
+    const file = document.getElementById("winImage").files[0];
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const img = document.createElement("img");
+      img.src = e.target.result;
+      document.getElementById("winPreview").innerHTML = '';
+      document.getElementById("winPreview").appendChild(img);
+    };
+    reader.readAsDataURL(file);
+  }
+
+  document.getElementById("login-box").classList.add("active");
+</script>
+
+</body>
+</html>
