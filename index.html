@@ -229,6 +229,20 @@
     <button onclick="calculateROI()">Track ROI</button>
     <p id="roi-output"></p>
   </div>
+  
+<div class="lesson" onclick="toggleLesson('listingGen')">
+  <h2>eBay/Vinted Listing Generator</h2>
+  <div class="lesson-content" id="listingGen">
+    <input type="text" id="productName" placeholder="Product Name (e.g. Hoodie)">
+    <input type="text" id="brand" placeholder="Brand (e.g. Nike)">
+    <input type="text" id="condition" placeholder="Condition (e.g. New, Like New)">
+    <input type="text" id="size" placeholder="Size (e.g. M, L, XL)">
+    <input type="text" id="color" placeholder="Color (e.g. Black)">
+    <input type="text" id="price" placeholder="Price (e.g. £35)">
+    <button onclick="generateListing()">Generate Listing</button>
+    <textarea id="listing-output" rows="6" readonly placeholder="Generated listing will appear here..."></textarea>
+  </div>
+</div>
 
   <div class="lesson" onclick="toggleLesson('wins')">
     <h2>Wins Page</h2>
@@ -288,6 +302,19 @@
   }
 
   document.getElementById("login-box").classList.add("active");
-</script>
+</scripfunction generateListing() {
+  const name = document.getElementById("productName").value;
+  const brand = document.getElementById("brand").value;
+  const condition = document.getElementById("condition").value;
+  const size = document.getElementById("size").value;
+  const color = document.getElementById("color").value;
+  const price = document.getElementById("price").value;
+
+  const listing = `🔥 ${brand} ${name.toUpperCase()} 🔥\n\n📦 Condition: ${condition}\n📏 Size: ${size}\n🎨 Color: ${color}\n💰 Price: ${price}\n\n✅ 100% authentic\n🚚 Fast shipping\n📸 More pics available on request\n\n💬 DM to buy or ask questions!\n#${brand.replace(/\s+/g, '')} #${name.replace(/\s+/g, '')}`;
+
+  document.getElementById("listing-output").value = listing;
+}
+t>
+  
 </body>
 </html>
