@@ -232,14 +232,14 @@
     const qty = parseInt(document.getElementById("qty").value);
     if (!isNaN(cost) && !isNaN(sell) && !isNaN(qty)) {
       const profit = ((sell - cost) * qty).toFixed(2);
-      document.getElementById("profit-result").innerText = `Estimated Profit: £${profit}`;
+      document.getElementById("profit-result").innerText = Estimated Profit: £${profit};
     }
   }
 
   function generateBundle() {
     const items = document.getElementById("bundleItems").value;
     const price = document.getElementById("bundlePrice").value;
-    document.getElementById("bundle-output").innerText = `🔥 BUNDLE DEAL 🔥\nItems: ${items}\nTotal Price: £${price}\nDM to claim now!`;
+    document.getElementById("bundle-output").innerText = 🔥 BUNDLE DEAL 🔥\nItems: ${items}\nTotal Price: £${price}\nDM to claim now!;
   }
 
   function calculateROI() {
@@ -247,7 +247,7 @@
     const earned = parseFloat(document.getElementById("returns").value);
     if (!isNaN(spent) && spent > 0 && !isNaN(earned)) {
       const roi = (((earned - spent) / spent) * 100).toFixed(2);
-      document.getElementById("roi-output").innerText = `ROI: ${roi}%`;
+      document.getElementById("roi-output").innerText = ROI: ${roi}%;
     }
   }
 
@@ -259,11 +259,10 @@
     const color = document.getElementById("color").value;
     const price = document.getElementById("price").value;
 
-    const listing = `🔥 ${brand} ${name.toUpperCase()} 🔥\n\n📦 Condition: ${condition}\n📏 Size: ${size}\n🎨 Color: ${color}\n💰 Price: ${price}\n\n✅ 100% authentic\n🚚 Fast shipping\n📸 More pics available on request\n\n💬 DM to buy or ask questions!\n#${brand.replace(/\s+/g, '')} #${name.replace(/\s+/g, '')}`;
+    const listing = 🔥 ${brand} ${name.toUpperCase()} 🔥\n\n📦 Condition: ${condition}\n📏 Size: ${size}\n🎨 Color: ${color}\n💰 Price: ${price}\n\n✅ 100% authentic\n🚚 Fast shipping\n📸 More pics available on request\n\n💬 DM to buy or ask questions!\n#${brand.replace(/\s+/g, '')} #${name.replace(/\s+/g, '')};
 
     document.getElementById("listing-output").value = listing;
   }
 </script>
 
 </body>
-</html>
