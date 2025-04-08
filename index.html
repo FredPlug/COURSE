@@ -56,18 +56,6 @@
     #login-box.active, #course-box.active {
       display: block;
     }
-    .calculator, .bundle-generator, .roi-tracker {
-      background: #444;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 20px;
-    }
-    .calendar {
-      margin-top: 20px;
-      padding: 10px;
-      background: #333;
-      border-radius: 8px;
-    }
     .wins-gallery {
       display: flex;
       flex-wrap: wrap;
@@ -84,7 +72,7 @@
 </head>
 <body>
 
-<div class="container" id="login-box" class="active">
+<div class="container active" id="login-box">
   <h1>FredSupplys Reseller Course</h1>
   <p>Enter password to access course</p>
   <input type="password" id="password" placeholder="Enter Password"/>
@@ -95,154 +83,116 @@
 <div class="container" id="course-box">
   <h1>Welcome Reseller</h1>
 
-  <!-- Lessons -->
   <div class="lesson" onclick="toggleLesson('lesson1')">
-    <h2>Lesson 1: Introduction</h2>
+    <h2>Lesson 1: Getting Started</h2>
     <div class="lesson-content" id="lesson1">
-      <p>Well done for starting. You'll get:</p>
-      <ul>
-        <li>All my suppliers</li>
-        <li>1:1 help and guidance</li>
-        <li>New and unseen reselling methods</li>
-        <li>Constant updates</li>
-        <li>Sneaky deals</li>
-        <li>Loads of money 💸</li>
-      </ul>
-      <p><strong>What I want from you:</strong></p>
-      <ul>
-        <li>Engagement</li>
-        <li>Weekly updates</li>
-        <li>Questions/methods</li>
-      </ul>
+      <p>Learn the basics of reselling and setting up your accounts. We'll walk you through the tools you need, where to source, and how to start earning from day one.</p>
     </div>
   </div>
 
   <div class="lesson" onclick="toggleLesson('lesson2')">
-    <h2>Lesson 2: Vendors</h2>
+    <h2>Lesson 2: Sourcing Stock</h2>
     <div class="lesson-content" id="lesson2">
-      <p><strong>UK Supplier List:</strong></p>
-      <p>07716436837<br>07886111639 alex<br>07446800064 ash<br>07983080021 frank<br>0757752268 maj<br>07383313441 james<br>07803391211 same<br>07496767177 sammy<br>07476908899 zac</p>
-      <p>Message: "Hi I got your number from Fred, he goes to Pitsea said I can get clothes off you"</p>
-      <p><strong>Chinese Supplier:</strong> +86 136 1599 2543</p>
-      <p><a href="https://t.me/+sqXrvwvrNgBIMGI0" target="_blank">Join Pgarmz Telegram</a></p>
+      <p>Discover the best ways to find profitable stock — whether it's through retail arbitrage, online drops, wholesalers, or local finds.</p>
     </div>
   </div>
 
   <div class="lesson" onclick="toggleLesson('lesson3')">
-    <h2>Lesson 3: Method to Quick Cash</h2>
+    <h2>Lesson 3: Listing Like a Pro</h2>
     <div class="lesson-content" id="lesson3">
-      <p>Sell reps on Vinted: perfumes and colognes = 3-4x profit</p>
-      <ol>
-        <li>Use 1+ year Vinted account (you can use others’ accounts too)</li>
-        <li>£35 starter pack (2 perfumes sell for £35–£45 each)</li>
-        <li>Reinvest for bigger profits</li>
-      </ol>
-      <p><strong>Perfume Pricing:</strong><br>1–5 = £12<br>10 = £11<br>20 = £10.50<br>50 = £9.50</p>
-      <p><strong>Example:</strong> Buy 50 at £9.50 = £475<br>Sell at £35 x 50 = £1750</p>
-      <p><strong>DON’T:</strong> Use same background, overpost, repost too quick</p>
+      <p>Photos, pricing, and descriptions that sell. We'll show you how to make your listings stand out on eBay, Depop, and other marketplaces.</p>
     </div>
   </div>
 
   <div class="lesson" onclick="toggleLesson('lesson4')">
-    <h2>Lesson 4: Help to Growth</h2>
+    <h2>Lesson 4: Scaling & Profit Tracking</h2>
     <div class="lesson-content" id="lesson4">
-      <ul>
-        <li>Set up Telegram, TikTok, Facebook</li>
-        <li>Create a logo</li>
-        <li>Post from Pgarmz or my page</li>
-        <li>Promote daily</li>
-        <li>Use WhatsApp Business</li>
-        <li><strong>TikTok Lives</strong> = 100 subs per live</li>
-      </ul>
+      <p>Learn how to track profits, reinvest smartly, and scale your reselling business efficiently. Includes our custom profit calculator tool below.</p>
+      <input type="number" id="cost" placeholder="Cost Price (£)">
+      <input type="number" id="sell" placeholder="Selling Price (£)">
+      <input type="number" id="qty" placeholder="Quantity Sold">
+      <button onclick="calculateProfit()">Calculate Profit</button>
+      <p id="profit-result"></p>
     </div>
   </div>
 
   <div class="lesson" onclick="toggleLesson('lesson5')">
-    <h2>Lesson 5: Receipt Generator</h2>
+    <h2>Lesson 5: Automation Tools</h2>
     <div class="lesson-content" id="lesson5">
-      <p><strong>£25 unlimited receipt gen + FREE eBay views</strong></p>
-      <ul>
-        <li>10 receipts = £15</li>
-        <li>20 = £35</li>
-        <li>30 = £40</li>
-      </ul>
+      <p>Automate messages, stock updates, and listings. Save time with smart tools that let you focus on flipping more items.</p>
     </div>
   </div>
 
   <div class="lesson" onclick="toggleLesson('lesson6')">
-    <h2>Lesson 6: Questions</h2>
+    <h2>Lesson 6: Advanced Tactics</h2>
     <div class="lesson-content" id="lesson6">
-      <form action="mailto:Eause.contact@gmail.com" method="POST" enctype="text/plain">
-        <textarea name="question" placeholder="Ask your question..." rows="4" required></textarea>
-        <input type="email" name="email" placeholder="Your email" required>
-        <button type="submit">Send Question</button>
-      </form>
+      <p>Bundling strategies, seasonal flipping, and leveraging limited releases. Perfect for resellers looking to go full-time or add £1,000+ per month.</p>
     </div>
   </div>
 
-  <!-- Tools -->
   <div class="lesson" onclick="toggleLesson('affiliate')">
     <h2>Affiliate Program</h2>
     <div class="lesson-content" id="affiliate">
-      <p>Earn 10% commission on every premium sale you refer.</p>
-      <p>Email for your unique code: <strong>Eause.contact@gmail.com</strong></p>
+      <p>Refer friends and earn! Share your unique link and get commission when they join. Great way to earn passive income.</p>
     </div>
   </div>
 
-  <div class="lesson" onclick="toggleLesson('stock')">
-    <h2>Stock Request</h2>
-    <div class="lesson-content" id="stock">
-      <form action="mailto:Eause.contact@gmail.com" method="POST" enctype="text/plain">
-        <textarea name="stock" placeholder="What stock do you want?" required></textarea>
-        <input type="email" name="email" placeholder="Your email" required>
-        <button type="submit">Request Stock</button>
-      </form>
+  <div class="lesson" onclick="toggleLesson('stock-form')">
+    <h2>Stock Request Form</h2>
+    <div class="lesson-content" id="stock-form">
+      <p>Need specific stock? Fill out the form below and we’ll try to source it for you:</p>
+      <input type="text" placeholder="What are you looking for?">
+      <button>Submit Request</button>
     </div>
   </div>
 
-  <div class="calendar">
-    <h3>Restock Calendar</h3>
-    <p>New stock drops every <strong>Wednesday</strong> and <strong>Sunday</strong>.</p>
+  <div class="lesson" onclick="toggleLesson('calendar')">
+    <h2>Restock Calendar</h2>
+    <div class="lesson-content" id="calendar">
+      <p>Keep track of key restock dates. Updated weekly so you never miss a drop.</p>
+    </div>
   </div>
 
-  <div class="calculator">
-    <h2>Profit Calculator</h2>
-    <input type="number" id="cost" placeholder="Cost per unit (£)">
-    <input type="number" id="sell" placeholder="Selling price (£)">
-    <input type="number" id="qty" placeholder="Quantity">
-    <button onclick="calculateProfit()">Calculate</button>
-    <p id="profit-result"></p>
+  <div class="lesson" onclick="toggleLesson('toolbox')">
+    <h2>Toolbox</h2>
+    <div class="lesson-content" id="toolbox">
+      <p>Links to our favorite reseller tools: photo editors, listing apps, price checkers, and more.</p>
+    </div>
   </div>
 
-  <div class="bundle-generator">
+  <div class="lesson" onclick="toggleLesson('bundle-gen')">
     <h2>Bundle Generator</h2>
-    <input type="text" id="bundleItems" placeholder="Enter items separated by commas">
-    <input type="number" id="bundlePrice" placeholder="Total price (£)">
-    <button onclick="generateBundle()">Generate Bundle</button>
-    <p id="bundle-output"></p>
+    <div class="lesson-content" id="bundle-gen">
+      <textarea id="bundleItems" placeholder="List items in bundle..."></textarea>
+      <input type="text" id="bundlePrice" placeholder="Bundle price (£)">
+      <button onclick="generateBundle()">Generate Bundle Text</button>
+      <pre id="bundle-output"></pre>
+    </div>
   </div>
 
-  <div class="roi-tracker">
+  <div class="lesson" onclick="toggleLesson('roi-tracker')">
     <h2>ROI Tracker</h2>
-    <input type="number" id="investment" placeholder="Total Spent (£)">
-    <input type="number" id="returns" placeholder="Total Earned (£)">
-    <button onclick="calculateROI()">Track ROI</button>
-    <p id="roi-output"></p>
+    <div class="lesson-content" id="roi-tracker">
+      <input type="number" id="investment" placeholder="Investment (£)">
+      <input type="number" id="returns" placeholder="Returns (£)">
+      <button onclick="calculateROI()">Calculate ROI</button>
+      <p id="roi-output"></p>
+    </div>
   </div>
-  
-<div class="lesson" onclick="toggleLesson('listingGen')">
-  <h2>eBay/Vinted Listing Generator</h2>
-  <div class="lesson-content" id="listingGen">
-    <input type="text" id="productName" placeholder="Product Name (e.g. Hoodie)">
-    <input type="text" id="brand" placeholder="Brand (e.g. Nike)">
-    <input type="text" id="condition" placeholder="Condition (e.g. New, Like New)">
-    <input type="text" id="size" placeholder="Size (e.g. M, L, XL)">
-    <input type="text" id="color" placeholder="Color (e.g. Black)">
-    <input type="text" id="price" placeholder="Price (e.g. £35)">
-    <button onclick="generateListing()">Generate Listing</button>
-    <textarea id="listing-output" rows="6" readonly placeholder="Generated listing will appear here..."></textarea>
+
+  <div class="lesson" onclick="toggleLesson('listing-gen')">
+    <h2>Listing Generator</h2>
+    <div class="lesson-content" id="listing-gen">
+      <input type="text" id="productName" placeholder="Product Name">
+      <input type="text" id="brand" placeholder="Brand">
+      <input type="text" id="condition" placeholder="Condition">
+      <input type="text" id="size" placeholder="Size">
+      <input type="text" id="color" placeholder="Color">
+      <input type="text" id="price" placeholder="Price">
+      <button onclick="generateListing()">Generate Listing</button>
+      <textarea id="listing-output" rows="6" readonly></textarea>
+    </div>
   </div>
-</div>
 
   <div class="lesson" onclick="toggleLesson('wins')">
     <h2>Wins Page</h2>
@@ -254,10 +204,10 @@
         <img src="https://raw.githubusercontent.com/FredPlug/COURSE/main/images/win3.jpg" alt="win 3">
         <img src="https://raw.githubusercontent.com/FredPlug/COURSE/main/images/win4.jpg" alt="win 4"> 
         <img src="https://raw.githubusercontent.com/FredPlug/COURSE/main/images/win5.jpg" alt="win 5"> 
-        <!-- Add more as needed -->
       </div>
     </div>
   </div>
+
 </div>
 
 <script>
@@ -301,20 +251,19 @@
     }
   }
 
-  document.getElementById("login-box").classList.add("active");
-</scripfunction generateListing() {
-  const name = document.getElementById("productName").value;
-  const brand = document.getElementById("brand").value;
-  const condition = document.getElementById("condition").value;
-  const size = document.getElementById("size").value;
-  const color = document.getElementById("color").value;
-  const price = document.getElementById("price").value;
+  function generateListing() {
+    const name = document.getElementById("productName").value;
+    const brand = document.getElementById("brand").value;
+    const condition = document.getElementById("condition").value;
+    const size = document.getElementById("size").value;
+    const color = document.getElementById("color").value;
+    const price = document.getElementById("price").value;
 
-  const listing = `🔥 ${brand} ${name.toUpperCase()} 🔥\n\n📦 Condition: ${condition}\n📏 Size: ${size}\n🎨 Color: ${color}\n💰 Price: ${price}\n\n✅ 100% authentic\n🚚 Fast shipping\n📸 More pics available on request\n\n💬 DM to buy or ask questions!\n#${brand.replace(/\s+/g, '')} #${name.replace(/\s+/g, '')}`;
+    const listing = `🔥 ${brand} ${name.toUpperCase()} 🔥\n\n📦 Condition: ${condition}\n📏 Size: ${size}\n🎨 Color: ${color}\n💰 Price: ${price}\n\n✅ 100% authentic\n🚚 Fast shipping\n📸 More pics available on request\n\n💬 DM to buy or ask questions!\n#${brand.replace(/\s+/g, '')} #${name.replace(/\s+/g, '')}`;
 
-  document.getElementById("listing-output").value = listing;
-}
-t>
-  
+    document.getElementById("listing-output").value = listing;
+  }
+</script>
+
 </body>
 </html>
