@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FredSupplys Reseller Course</title>
+  <title>FredSupply Reseller Course</title>
   <style>
     body {
       background: #1e1e1e;
@@ -24,14 +24,14 @@
     }
     .lesson {
       background: #3a3a3a;
-      margin: 10px 0;
-      padding: 15px;
+      margin: 20px 0;
+      padding: 20px;
       border-radius: 8px;
       cursor: pointer;
     }
     .lesson-content {
       display: none;
-      margin-top: 10px;
+      margin-top: 15px;
     }
     button {
       background: red;
@@ -68,114 +68,130 @@
       border-radius: 10px;
       border: 2px solid red;
     }
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background: #111;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .nav a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
 
   <!-- Login Section -->
   <div class="container active" id="login-box">
-    <h1>FredSupplys Reseller Course</h1>
+    <h1>FredSupply Reseller Course</h1>
     <p>Enter password to access course</p>
-    <input type="password" id="password" placeholder="Enter Password"/>
+    <input type="password" id="password" placeholder="Enter Password" />
     <button onclick="checkPassword()">Submit</button>
     <p id="error" style="color:red; display:none;">Incorrect password</p>
   </div>
 
   <!-- Course Section -->
   <div class="container" id="course-box">
+    <div class="nav">
+      <a href="#lesson1">Lesson 1</a>
+      <a href="#lesson2">Lesson 2</a>
+      <a href="#lesson3">Lesson 3</a>
+      <a href="#lesson4">Lesson 4</a>
+      <a href="#lesson5">Lesson 5</a>
+      <a href="#lesson6">Lesson 6</a>
+      <a href="#affiliate">Affiliate</a>
+      <a href="#stock-form">Stock</a>
+      <a href="#calendar">Calendar</a>
+      <a href="#toolbox">Toolbox</a>
+      <a href="#bundle-gen">Bundle</a>
+      <a href="#roi-tracker">ROI</a>
+      <a href="#listing-gen">Listing</a>
+      <a href="#wins">Wins</a>
+    </div>
+
     <h1>Welcome Reseller</h1>
 
     <!-- Lessons -->
-    <div class="lesson" onclick="toggleLesson('lesson1')">
+    <div class="lesson" onclick="toggleLesson('lesson1')" id="lesson1">
       <h2>Lesson 1: Getting Started</h2>
-      <div class="lesson-content" id="lesson1">
-        <p>
-          Learn the basics of reselling and setting up your accounts. We'll walk you through the tools you need, where to source, and how to start earning from day one.
-          <br><br>
-          Welcome Resellers – well done for taking the step to start reselling properly.
-          <br><br>
-          Advantages:
-          <ul>
-            <li>All my suppliers</li>
-            <li>1:1 help and guidance</li>
-            <li>New and unseen methods</li>
-            <li>Constant updates</li>
-            <li>Sneaky deals</li>
-            <li>Loads of money 💸</li>
-          </ul>
-        </p>
+      <div class="lesson-content">
+        <p>Welcome to reselling! Here's what you get:</p>
+        <ul>
+          <li>All my suppliers</li>
+          <li>1:1 help and guidance</li>
+          <li>New and unseen methods</li>
+          <li>Constant updates</li>
+          <li>Sneaky deals</li>
+          <li>Loads of money 💸</li>
+        </ul>
       </div>
     </div>
 
-    <div class="lesson" onclick="toggleLesson('lesson2')">
+    <div class="lesson" onclick="toggleLesson('lesson2')" id="lesson2">
       <h2>Lesson 2: PLUG LIST</h2>
-      <div class="lesson-content" id="lesson2">
-        <p>
-         , UK Supplier List  
-07716436837
-07886111639 alex
-07446800064 ash
-07983080021 frank
-0757752268 maj
-07383313441 james
-07803391211 same
-07496767177 sammy
-07476908899 zac 
-
-ABOVE LISTED ARE ALL UK SUPPLIERS
-message them saying ' hi i got your number from fred he goes to pitsea said i can get clothes of you
-
-+86 136 1599 2543 
-my hands down best Chinese supplier ive been using for over 5 years now 
-shipping 5-9 days 
-best prices
-never messes up
-always top quality 
-        </p>
+      <div class="lesson-content">
+        <p>UK Supplier List:</p>
+        <ul>
+          <li>07716436837</li>
+          <li>07886111639 (Alex)</li>
+          <li>07446800064 (Ash)</li>
+          <li>07983080021 (Frank)</li>
+          <li>0757752268 (Maj)</li>
+          <li>07383313441 (James)</li>
+          <li>07803391211 (Same)</li>
+          <li>07496767177 (Sammy)</li>
+          <li>07476908899 (Zac)</li>
+        </ul>
+        <p>Text them: <strong>"Hi I got your number from Fred (Pitsea), he said I can get clothes off you."</strong></p>
+        <p>Best Chinese Supplier (5+ years):</p>
+        <ul>
+          <li>+86 136 1599 2543</li>
+          <li>Fast shipping (5–9 days)</li>
+          <li>Best prices, top quality</li>
+        </ul>
       </div>
     </div>
 
-    <div class="lesson" onclick="toggleLesson('lesson3')">
+    <div class="lesson" onclick="toggleLesson('lesson3')" id="lesson3">
       <h2>Lesson 3: VINTED CHOP</h2>
-      <div class="lesson-content" id="lesson3">
-        <p>
-          Okay so here's where the real money is involved  
-i identified a way to sell reps on vinted such as perfumes and colognes 
-this gives you a easy access to around 3-4x profit 
-here's the key objectives 
-1. MUST have a 1 year + old vinted account (a lot of girls run them for me ) 
-2. invest 35£ into my starter pack contains 2 perfumes which you will sell for 35-45 each  
-3 reinvest the money you make until you feel your making enough to take money out  
-
-PERFUME DEALS 
-1-5 = 12£ each + shipping 
-10 = 11£ each + shipping 
-20 = 10.50£ each + shipping 
-50 = 9.50£ each + shipping 
-do some maths if u buy 50 at £9.50 each that costs you 
-£475 COST x50 by 35(average order value ) = £1750 
-
-WITH this method alone ive generated around £10,000 so far i have proof of everything 
-
-this is a goldmine as no one is doing it right now 
-
-DONT 
-use the same background on 2 different accounts 
-repost the same item as soon as it sells 
-over post
-
-
-
-        </p>
+      <div class="lesson-content">
+        <p>This is the goldmine 💰</p>
+        <ul>
+          <li>Sell rep perfumes on Vinted (3–4x profit)</li>
+          <li>Use aged Vinted accounts (1+ year old)</li>
+          <li>Starter pack: £35 = 2 perfumes → sell each for £35–£45</li>
+          <li>Reinvest profits until you're making enough</li>
+        </ul>
+        <p>Perfume Pricing:</p>
+        <ul>
+          <li>1–5 = £12 each + shipping</li>
+          <li>10 = £11 each</li>
+          <li>20 = £10.50 each</li>
+          <li>50 = £9.50 each</li>
+        </ul>
+        <p>EXAMPLE: Buy 50 → £475 → Sell for £1750 = Massive profit</p>
+        <p><strong>Don't:</strong></p>
+        <ul>
+          <li>Use the same background on multiple accounts</li>
+          <li>Repost items instantly</li>
+          <li>Spam post</li>
+        </ul>
       </div>
     </div>
 
-    <div class="lesson" onclick="toggleLesson('lesson4')">
+    <div class="lesson" onclick="toggleLesson('lesson4')" id="lesson4">
       <h2>Lesson 4: Scaling & Profit Tracking</h2>
-      <div class="lesson-content" id="lesson4">
-        <p>
-          Grow using Telegram, TikTok, FB & automation like WhatsApp Business.
-        </p>
+      <div class="lesson-content">
+        <p>Use Telegram, TikTok, Facebook, WhatsApp Business for scaling.</p>
         <input type="number" id="cost" placeholder="Cost Price (£)">
         <input type="number" id="sell" placeholder="Selling Price (£)">
         <input type="number" id="qty" placeholder="Quantity Sold">
@@ -184,78 +200,78 @@ over post
       </div>
     </div>
 
-    <div class="lesson" onclick="toggleLesson('lesson5')">
-      <h2>Lesson 5: PERFUME PRICE LIST</h2>
-      <div class="lesson-content" id="lesson5">
-        <p>MANY STYLES AND BRANDS
-        1 for 15£ 
-        5 for 13.50£ each
-        10 for 12.50£ each
-        20 for 11.50£ each
-        30 for 10£ each 
-          any larger qauntities or requests whatsapp me /p>
+    <div class="lesson" onclick="toggleLesson('lesson5')" id="lesson5">
+      <h2>Lesson 5: Perfume Price List</h2>
+      <div class="lesson-content">
+        <ul>
+          <li>1 for £15</li>
+          <li>5 for £13.50 each</li>
+          <li>10 for £12.50 each</li>
+          <li>20 for £11.50 each</li>
+          <li>30 for £10 each</li>
+        </ul>
+        <p>Contact me on WhatsApp for custom orders</p>
       </div>
     </div>
 
-    <div class="lesson" onclick="toggleLesson('lesson6')">
+    <div class="lesson" onclick="toggleLesson('lesson6')" id="lesson6">
       <h2>Lesson 6: Advanced Tactics</h2>
-      <div class="lesson-content" id="lesson6">
-        <p>
-          Bundling strategies, seasonal flipping, and limited releases.<br><br>
-          Premium Course Upgrade: £25<br>
-          Or Pay As You Go:
-          <ul>
-            <li>10£ - 15</li>
-            <li>20£ - 35</li>
-            <li>30£ - 90</li>
-          </ul>
-        </p>
+      <div class="lesson-content">
+        <p>Use bundling, limited drops, seasonal flipping.</p>
+        <p>Upgrade Options:</p>
+        <ul>
+          <li>£25 Full Premium Upgrade</li>
+          <li>Pay As You Go:</li>
+          <li>£10 → £15 value</li>
+          <li>£20 → £35 value</li>
+          <li>£30 → £90 value</li>
+        </ul>
       </div>
     </div>
 
-    <!-- Extra Tools -->
-    <div class="lesson" onclick="toggleLesson('affiliate')">
+    <!-- Tools -->
+    <div class="lesson" onclick="toggleLesson('affiliate')" id="affiliate">
       <h2>Affiliate Program</h2>
-      <div class="lesson-content" id="affiliate">
-        <p>Refer friends and earn! Email me your friend’s name to get 10% of their signup.</p>
+      <div class="lesson-content">
+        <p>Refer friends and earn 10% of their signup. Just email me their name.</p>
       </div>
     </div>
 
-    <div class="lesson" onclick="toggleLesson('stock-form')">
+    <div class="lesson" onclick="toggleLesson('stock-form')" id="stock-form">
       <h2>Stock Request Form</h2>
-      <div class="lesson-content" id="stock-form">
+      <div class="lesson-content">
         <input type="text" placeholder="What are you looking for?">
         <button>Submit Request</button>
       </div>
     </div>
 
-    <div class="lesson" onclick="toggleLesson('calendar')">
+    <div class="lesson" onclick="toggleLesson('calendar')" id="calendar">
       <h2>Restock Calendar</h2>
-      <div class="lesson-content" id="calendar">
-        <p>Keep track of key restock dates. Updated weekly so you never miss a drop.</p>
+      <div class="lesson-content">
+        <p>Updated weekly so you never miss a drop.</p>
       </div>
     </div>
 
-    <div class="lesson" onclick="toggleLesson('toolbox')">
+    <div class="lesson" onclick="toggleLesson('toolbox')" id="toolbox">
       <h2>Toolbox</h2>
-      <div class="lesson-content" id="toolbox">
-        <p>Links to our favorite reseller tools: photo editors, listing apps, price checkers, and more.</p>
+      <div class="lesson-content">
+        <p>Photo editors, listing apps, price checkers, etc.</p>
       </div>
     </div>
 
-    <div class="lesson" onclick="toggleLesson('bundle-gen')">
+    <div class="lesson" onclick="toggleLesson('bundle-gen')" id="bundle-gen">
       <h2>Bundle Generator</h2>
-      <div class="lesson-content" id="bundle-gen">
-        <textarea id="bundleItems" placeholder="List items in bundle..."></textarea>
+      <div class="lesson-content">
+        <textarea id="bundleItems" placeholder="List items..."></textarea>
         <input type="text" id="bundlePrice" placeholder="Bundle price (£)">
-        <button onclick="generateBundle()">Generate Bundle Text</button>
+        <button onclick="generateBundle()">Generate Bundle</button>
         <pre id="bundle-output"></pre>
       </div>
     </div>
 
-    <div class="lesson" onclick="toggleLesson('roi-tracker')">
+    <div class="lesson" onclick="toggleLesson('roi-tracker')" id="roi-tracker">
       <h2>ROI Tracker</h2>
-      <div class="lesson-content" id="roi-tracker">
+      <div class="lesson-content">
         <input type="number" id="investment" placeholder="Investment (£)">
         <input type="number" id="returns" placeholder="Returns (£)">
         <button onclick="calculateROI()">Calculate ROI</button>
@@ -263,9 +279,9 @@ over post
       </div>
     </div>
 
-    <div class="lesson" onclick="toggleLesson('listing-gen')">
+    <div class="lesson" onclick="toggleLesson('listing-gen')" id="listing-gen">
       <h2>Listing Generator</h2>
-      <div class="lesson-content" id="listing-gen">
+      <div class="lesson-content">
         <input type="text" id="productName" placeholder="Product Name">
         <input type="text" id="brand" placeholder="Brand">
         <input type="text" id="condition" placeholder="Condition">
@@ -277,9 +293,9 @@ over post
       </div>
     </div>
 
-    <div class="lesson" onclick="toggleLesson('wins')">
-      <h2>Wins Page</h2>
-      <div class="lesson-content" id="wins">
+    <div class="lesson" onclick="toggleLesson('wins')" id="wins">
+      <h2>Wins Gallery</h2>
+      <div class="lesson-content">
         <div class="wins-gallery">
           <img src="https://raw.githubusercontent.com/FredPlug/COURSE/main/images/win1.jpg" alt="win 1">
           <img src="https://raw.githubusercontent.com/FredPlug/COURSE/main/images/win2.jpg" alt="win 2">
@@ -303,7 +319,7 @@ over post
     }
 
     function toggleLesson(id) {
-      const content = document.getElementById(id);
+      const content = document.getElementById(id).querySelector('.lesson-content');
       content.style.display = content.style.display === "block" ? "none" : "block";
     }
 
@@ -339,9 +355,10 @@ over post
       const size = document.getElementById("size").value;
       const color = document.getElementById("color").value;
       const price = document.getElementById("price").value;
-      const listing = `🔥 ${brand} ${name.toUpperCase()} 🔥\n\n📦 Condition: ${condition}\n📏 Size: ${size}\n🎨 Color: ${color}\n💰 Price: ${price}\n\n✅ 100% authentic\n🚚 Fast shipping\n📸 More pics available on request\n\n💬 DM to buy or ask questions!\n#${brand.replace(/\s+/g, '')} #${name.replace(/\s+/g, '')}`;
+      const listing = `🔥 ${brand} ${name.toUpperCase()} 🔥\n\n📦 Condition: ${condition}\n📏 Size: ${size}\n🎨 Color: ${color}\n💰 Price: £${price}\n\n✅ 100% authentic\n🚚 Fast shipping\n📸 More pics available on request\n\n💬 DM to buy or ask questions!\n#${brand.replace(/\s+/g, '')} #${name.replace(/\s+/g, '')}`;
       document.getElementById("listing-output").value = listing;
     }
   </script>
 
 </body>
+</html>
