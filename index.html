@@ -91,6 +91,7 @@
 <body>
 
 <!-- Login Section -->
+<!-- Login Section -->
 <div class="container active" id="login-box">
   <h1>FredSupply Reseller Course</h1>
   <p>Enter password to access course</p>
@@ -104,6 +105,40 @@
   <a href="https://t.me/fredsupply" target="_blank">
     <button style="background-color: #0088cc; margin-top: 10px;">📦 Join Telegram For Stock</button>
   </a>
+
+  <br><br>
+  <button onclick="toggleCourseIncludes()" style="margin-top: 20px; background-color: red;">
+    📖 What This Course Includes
+  </button>
+  <div id="course-includes" style="display:none; margin-top: 15px; background: #3a3a3a; padding: 15px; border-radius: 8px;">
+    <h3>COURSE INCLUDES</h3>
+    <ul>
+      <li>✅ All UK and International Suppliers</li>
+      <li>📞 1-to-1 Help</li>
+      <li>⏰ 24/7 Support</li>
+      <li>💰 Easy Money-Making Methods</li>
+      <li>🔥 Current Best Sellers</li>
+      <li>🧰 Built-in Tools:
+        <ul>
+          <li>• Description Generator</li>
+          <li>• ROI Calculator</li>
+          <li>• Bundle Generator</li>
+          <li>• Stock Request Form</li>
+          <li>• Profit Calculator</li>
+        </ul>
+      </li>
+    </ul>
+    <p style="margin-top: 10px;">🔁 We update this course daily with new features & tools!</p>
+  </div>
+</div>
+
+<script>
+  function toggleCourseIncludes() {
+    const section = document.getElementById("course-includes");
+    section.style.display = section.style.display === "none" ? "block" : "none";
+  }
+</script>
+
 </div>
 
   </div>
